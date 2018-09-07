@@ -107,7 +107,15 @@ public partial class Client_Default2 : System.Web.UI.Page
 
             if (Convert.ToInt32(ins.Text) >= 8)
             {
-                e.Row.BackColor = System.Drawing.Color.Yellow;
+                string test = Common.Get(objsql.GetSingleValue("select regno from tblmaster where regno='" + mid.Value + "'"));
+                if (test != "")
+                {
+                    e.Row.BackColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    e.Row.BackColor = System.Drawing.Color.Yellow;
+                }
 
             }
             else
