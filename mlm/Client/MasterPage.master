@@ -1,0 +1,103 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+    <!doctype html>
+    <html>
+	
+    <head id="Head1" runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+        <title>Toplife | Homepage</title>
+
+        <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+       
+        <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/sticky.min.js"></script>
+        <script type="text/javascript" src="../js/custom.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/npm.js"></script>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
+<style>
+@font-face {
+    font-family: myFirstFont;
+    src: url(chatrik.ttf);
+}
+</style>
+    </head>
+
+    <body>
+        <form id="form1" runat="server">
+            <header style="padding-bottom:5px; margin-bottom:30px;">
+                <div class="container">
+                    <div>
+                        <a href="../index.html"><img src="../img/logo4.png" class="img"></a>
+	
+                    <span style="color:#c83f91; border-bottom: 2px solid #36c0f1; float:right; font-size: 17px; font-family: bold !important;"><strong> WELCOME :</strong> 
+                    <asp:Label ID="Label2" CssClass="right-1" runat="server" text-decoration="underline" Text="Label" Font-Bold="True" Font-Size="Large" ForeColor="#c83f91"></asp:Label>                    
+</div>
+                      </span>
+            </header>
+<div class="container" style="padding:30px 0px;; background:#fff;">
+            <nav id="mainnav-m" style="background: transparent none repeat scroll 0% 0%;">
+
+                <ul>
+                   <li><a href="../index.html">Home</a></li>
+                           		<li><a href="../about.html">About Us</a></li>
+                           		<li><a href="../product.html">Products</a></li>
+			<li><a href="../plan.html">Business plan</a></li>
+								<li><a href="../gallery.html">Gallery</a></li>								
+                            	<li><a href="contact.html">Contact</a></li>
+   <li><a href="../client.aspx">Log Out</a></li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+</div>
+            <div class="container" style="background:#fff;">
+                <div class="row">
+                    <div class="col-md-2">
+                        <nav id="mainnav1">
+
+                            <ul style="margin:0px;">
+	                          	<li class="main-menu">Main Menu</li>
+                                <li><a href="default.aspx">Home</a></li>
+                                <li><a href="pwdchg.aspx">Password</a></li>
+                                <li><a href="Profile.aspx">Profile</a></li>
+                                <li><a href="Montly-Pair.aspx">Monthly Pair</a></li>
+                                <li><a href="pins.aspx">Pins</a></li>
+                                <li><a href="direct.aspx">Direct</a></li>
+                                <li><a href="downline.aspx">Downline</a></li>
+                                <li><a href="ddownline.aspx">Defaulters</a></li>
+                                <li><a href="tree.aspx">Tree</a></li>
+                                <li><a href="payments.aspx">Your Installment</a></li>
+                                 <li><a href="Leader-List.aspx">Groups</a></li>
+                                <li><a href="reward.aspx">Reward</a></li>
+                                 <li><a href="transfer-report.aspx">Transfer Report</a></li>
+                                <li>
+                                    <asp:LinkButton ID="LinkButton1" OnClick="LinkButton1_Click" runat="server">Log Out</asp:LinkButton></li>
+                            </ul>
+
+                            <div class="clear"></div>
+
+                        </nav>
+                    </div>
+                    <div class="col-md-10">
+		<div><span style="float:right;">
+			 <asp:Label ID="Label3"  runat="server" Text="Label" Font-Bold="True" Font-Size="Large"  ForeColor="#c83f91"></asp:Label><br>
+			  <asp:Label ID="Label1"  runat="server" Text="Label" Font-Bold="True" Font-Size="Large"  ForeColor="#c83f91"></asp:Label>
+		</div>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="footer-bottom" align="center">
+                <p>&copy; Toplife 2016.</p>
+            </div>
+        </form>
+    </body>
+
+    </html>

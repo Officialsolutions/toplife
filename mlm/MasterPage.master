@@ -1,0 +1,78 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!doctype html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Toplife | Homepage</title>
+
+
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/sticky.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/npm.js"></script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<!--<style>
+@font-face {
+    font-family: myFirstFont;
+    src: url(chatrik.ttf);
+}
+</style>-->
+</head>
+<body>
+    <form id="form1" runat="server">
+		<header>
+			<div class="width">
+				<div class="div">
+				<a href="index.html"><img src="img/logo.png" class="img"></a>
+
+			</div>
+				
+		</header>
+
+		<nav id="mainnav">
+			<div class="width">
+  				<ul>
+                            	<li class="selected-item"><a href="index.aspx">Home</a></li>
+                           		<li><a href="about.html">About Us</a></li>
+                           		<li><a href="product.html">Products</a></li>
+								<li><a href="plan.html">Business plan</a></li>
+								<li><a href="gallery.html">Gallery</a></li>			
+                                <li><a href="Achievers.aspx">Achiever</a></li>							
+                            	<li><a href="contact.html">Contact</a></li>
+                            	<li><a href="client.aspx">Login</a></li>
+                            	<li><a href="reg.aspx?pin=">Register</a></li>
+                            	<li><a href="toplife.pdf">KYC</a></li>
+                        	</ul>
+
+				<div class="clear"></div>
+		
+			</div>
+		</nav>
+        <table width="100%" style="background:menu;">
+        <tr>
+        <td align="center" valign="middle" height="400px">
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder>
+        </td>
+        </tr>
+        </table>
+        <div class="footer-bottom" align="center">
+            <p>&copy; Toplife 2016.</p>
+         </div>
+      
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+</form>
+</body>
+</html>

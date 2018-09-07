@@ -1,0 +1,218 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!doctype html>
+<html>
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Toplife | Homepage</title>
+    <style>
+        nav#mainnav1 ul li {
+            list-style: none;
+            border-bottom: 2px solid #fba91c;
+        }
+
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            /*font-size: 20px;*/
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+            /* On mouse-over */
+            .mainnav2 a:hover, .dropdown-btn:hover {
+                /*color: #f1f1f1;*/
+            }
+
+        /* Main content */
+        .main {
+            margin-left: 200px; /* Same as the width of the sidenav */
+            font-size: 20px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        /* Add an active class to the active dropdown button */
+        .active {
+            /*background-color: green;*/
+            /*color: white;*/
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+            display: none;
+            /*background-color: #262626;*/
+            padding-left: 8px;
+        }
+
+        /* Optional: Style the caret down icon */
+        .fa-caret-down {
+            float: right;
+            padding-right: 4px;
+        }
+
+        .new {
+            margin-top: 3px;
+            margin-bottom: 4px;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+    </style>
+
+
+
+
+
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/sticky.min.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/npm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <header>
+            <div class="width">
+                <div class="">
+                    <a href="../index.html">
+                        <img src="../img/logo4.png" class="img"></a>
+                </div>
+        </header>
+
+
+        <div class="container" style="padding: 30px 0px; background: #fff;">
+            <nav id="mainnav-m" style="background: transparent none repeat scroll 0% 0%;">
+
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../product.html">Products</a></li>
+                    <li><a href="../plan.html">Business plan</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../admin.aspx">Log Out</a></li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+        </div>
+        <div class="container" style="background: #fff;">
+            <div class="row">
+                <div class="col-md-3">
+                    <nav id="mainnav2">
+
+                        <ul style="margin: 0px;">
+                            <li class="main-menu">Main Menu</li>
+                            <li><a href="default.aspx">Home</a></li>
+                            <li><a href="pwdchg.aspx">Password</a></li>
+                            <li><a href="members.aspx">Members</a></li>
+                            <li><a href="kyc.aspx">KYC</a></li>
+                            <li><a href="DeleteID.aspx">Delete ID</a></li>
+                            <li><a href="joinings.aspx">Client Tree</a></li>
+
+                            <li><a href="transpin.aspx">Transfer</a></li>
+                            <li><a href="installment.aspx">Installment</a></li>
+                            <li><a href="dinstallment.aspx">Delete Installment</a></li>
+                            <li><a href="freeins.aspx">Free Installment</a></li>
+                            <li><a href="ddownline.aspx">Defaulters</a></li>
+                            <li><a href="reward.aspx">Rewards</a></li>
+                            <li><a href="dist.aspx">District</a></li>
+                            <li><a href="states.aspx">States</a></li>
+                            <li><a href="closing.aspx">Closing</a></li>
+                            <li><a href="data.aspx">Data</a></li>
+                            <li><a href="punjabityping.aspx">Punjabi Typing</a></li>
+
+                            <li><a href="view-album.aspx">Photo</a></li>
+                            <li><a href="view-slider.aspx">Sliders</a></li>
+                            <li><a href="view-leader.aspx">Leaders</a></li>
+                            <li><a href="All-Memeber-List.aspx">All Member List</a></li>
+                            <li><a href="Leader-search.aspx">Leader Search</a></li>
+                            <li><a href="Setting.aspx">Setting</a></li>
+                            <li><a href="Receipt.aspx">Receipt Details</a></li>
+
+                            <li class="dropdown-btn">BV Billing<i class="caret fa-caret-down"></i></li>
+                            <li class="dropdown-container">
+                                <a href="Purchase.aspx">Purchase</a>
+                                <hr class="new" />
+                                <a href="ManageSale.aspx">Manage Sale</a>
+                                <hr class="new" />
+                                <a href="Product.aspx">Inventory</a>
+                                <hr class="new" />
+                                <a href="view-products.aspx">Inventory List</a>
+                            </li>
+                            <li><a href="AddfreeIns.aspx">Check Free Installment</a></li>
+                            <li class="dropdown-btn">Installment Billing<i class="caret fa-caret-down"></i></li>
+
+                            <%--<li class="dropdown-container">--%>
+                            <li class="dropdown-container"><a href="seveninstall.aspx">sale product</a>
+                                <hr class="new" />
+                                <a href="Sale-Record.aspx">Manage products sale </a>
+                                <hr class="new" />
+                                <a href="serial-search.aspx">Search Serial no.</a>
+                                <hr class="new" />
+                                <a href="add-inventry.aspx">Add products </a>
+                                <hr class="new" />
+                                <a href="view-inventory.aspx">View products </a>
+                            </li>
+                            <%-- </li>--%>
+
+
+                            <li><a href="transfer-report.aspx">Transfer Report</a></li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton1" OnClick="LinkButton1_Click" runat="server">Log Out</asp:LinkButton></li>
+                        </ul>
+
+                        <div class="clear"></div>
+
+                    </nav>
+                </div>
+                <div class="col-md-9">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="footer-bottom" align="center">
+            <p>&copy; Toplife 2016.</p>
+        </div>
+    </form>
+    <script type="text/javascript">
+        {
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            }
+        }
+    </script>
+<%--    <script src="../css/bootstrap-confirm-delete.js"></script>
+    <link href="../css/bootstrap-confirm-delete.css" rel="stylesheet" />
+    <a href="../css/bower.json">../css/bower.json</a>--%>
+</body>
+</html>
