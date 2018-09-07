@@ -48,10 +48,19 @@ public partial class Client_Default2 : System.Web.UI.Page
             Panel p2 = (Panel)e.Row.FindControl("pnp");
             Panel pnea = (Panel)e.Row.FindControl("pnea"); // eng
             Panel pnpa = (Panel)e.Row.FindControl("pnpa"); // pun
+            HiddenField reg = (HiddenField)e.Row.FindControl("hfreg");
             HiddenField ins = (HiddenField)e.Row.FindControl("hfin");
             if (Convert.ToInt32(ins.Value) >= 8)
             {
-                e.Row.BackColor = System.Drawing.Color.Yellow;
+                string test = Common.Get(objsql.GetSingleValue("select regno from tblmaster where regno='" + reg.Value + "'"));
+                if (test != "")
+                {
+                    e.Row.BackColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    e.Row.BackColor = System.Drawing.Color.Yellow;
+                }
 
             }
             else

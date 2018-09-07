@@ -31,7 +31,12 @@
                                     <%# Container.DataItemIndex+1 %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-
+                            <asp:TemplateField HeaderText="REC No.">
+                                <ItemTemplate>
+                                    <label><%# Eval("Rec") %></label> / <%#Eval("Name") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            
                             <asp:BoundField DataField="Rec" HeaderText="REC No." />
                             <asp:BoundField DataField="DATE" HeaderText="DATE" />
                             <asp:BoundField DataField="ID" HeaderText="ID" />

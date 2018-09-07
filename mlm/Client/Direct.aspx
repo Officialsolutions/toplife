@@ -87,6 +87,7 @@
               <asp:BoundField DataField="MOBILE2" HeaderText="MOBILE2" />
                <asp:TemplateField HeaderText="Address">
                   <ItemTemplate>
+                      <asp:HiddenField ID="hfreg" Value='<%#Eval("UserId") %>' runat="server" />
                       <asp:Panel ID="pnea" runat="server">
                       <asp:Label ID="lblename" runat="server" Text='<%#Eval("Address") %>'></asp:Label> 
                       </asp:Panel>

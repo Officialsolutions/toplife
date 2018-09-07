@@ -26,7 +26,7 @@ public partial class Client_Default2 : System.Web.UI.Page
         con.ConnectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
         con.Open();
         SqlCommand cmd = new SqlCommand();
-        cmd.CommandText = "select row_number() over (order by sr) as SR,SR as 'Rec',DATE_ENTRY as DATE,ID,paid from installment where id='"+ Session["id"] + "' and paid='0' order by DATE_ENTRY";
+        cmd.CommandText = "select row_number() over (order by sr) as SR,SR as 'Rec',DATE_ENTRY as DATE,ID,paid,(select Name from member_creation where id=sr) as Name from installment where id='" + Session["id"] + "' and paid='0' order by DATE_ENTRY";
         cmd.Parameters.Add("@ID", SqlDbType.VarChar).Value = Convert.ToString(Session["ID"]);
         cmd.Connection = con;
         GridView1.DataSource = cmd.ExecuteReader();
