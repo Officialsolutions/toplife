@@ -288,5 +288,19 @@ public class Common
         return classCode.ToString();
     }
     #endregion
-
+    public string GenerateInvoice()
+    {
+        SQLHelper objsql = new SQLHelper();
+        string max = Common.Get(objsql.GetSingleValue("select max(id) from tblMaster"));
+        if(max=="" && max==null)
+        {
+            return "1";
+           
+        }
+        else
+        {
+            string maxpid = Common.Get(objsql.GetSingleValue("select purchaseid from tblMaster where id='"+max+"'"));
+            return (Convert.ToInt32(maxpid) + Convert.ToInt32(1)).ToString();
+        }
+    }
 }

@@ -23,7 +23,7 @@ public partial class Admin_billing_product : System.Web.UI.Page
         {
 
             Session["DataTable"] = "";
-            invoice = cm.Generatepass();
+            invoice = cm.GenerateInvoice();
         }
         txtregno.Text = Request.QueryString["id"].ToString();
         lblname.Text = Common.Get(objsql.GetSingleValue("select name from member_creation where id='" + txtregno.Text + "'"));

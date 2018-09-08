@@ -37,7 +37,7 @@ public partial class Admin_Sale_Record : System.Web.UI.Page
     }
     protected void bind()
     {
-        dt = objsql.GetTable("select mast.purchaseid,mast.regno,mast.amount,m.NAME,m.FATHER,m.ADDRESS,m.MOBILE,s.date from tblMaster mast join MEMBER_CREATION m on m.ID=mast.regno join tblSingle s on s.purchaseid=mast.purchaseid");
+        dt = objsql.GetTable("select mast.purchaseid,mast.regno,mast.amount,m.NAME,m.FATHER,m.ADDRESS,m.MOBILE,(select max(date) from tblSingle where purchaseid=mast.purchaseid) as date from tblMaster mast join MEMBER_CREATION m on m.ID=mast.regno");
         if (dt.Rows.Count > 0)
         {
             gvpins.DataSource = dt;

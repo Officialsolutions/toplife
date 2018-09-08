@@ -42,7 +42,7 @@ public partial class Client_Default2 : System.Web.UI.Page
             //pnlproduct.Visible = true;
           
             DataTable dts = new DataTable();
-            dts = objsql.GetTable("select p.name,p.mrp,p.bv,p.image,s.qty,s.date,s.purchaseid from tblproduct p Inner join tblSingle s on s.item = p.id and s.regno = '"+ Session["id"] + "'");
+            dts = objsql.GetTable("select p.name,p.mrp,p.bv,p.image,s.qty,s.date,s.purchaseid from inventoryproduct p Inner join tblSingle s on s.item = p.id and s.regno = '" + Session["id"] + "'");
             GridView2.DataSource = dts;
             GridView2.DataBind();
 
